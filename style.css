@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto:wght@300;400&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #111;
+  color: #fff;
+}
+header{
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  min-height: 11vh;
+}
+
+nav{
+  width: 60%;
+}
+.nav-links{
+  display: flex;
+}
+
+.nav-links li{
+  list-style-type: none;
+
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  transition: transform 0.5s ease-in;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: .4s;
+}
+nav ul li a:hover{
+  color: #d72f2f;
+  transform: scale(1.1);
+}
+
+
+header .logo{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
+}
+
+
+header .logo span{
+  color: #d72f2f;
+}
+
+
+
+
+
+#banner,
+#covid .banner{
+  position: relative;
+  min-height: 89vh;
+  background-color: #111;
+  display: flex;
+  padding: 40px 0 0;
+  justify-content: center;
+  flex-direction: column;
+
+  overflow:hidden;
+}
+
+#banner:before{
+  content: '';
+  position: absolute;
+  right: -120px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #d72f2f;
+  transform-origin: top;
+  transform:skewX(-25deg);
+  z-index: 1;
+  opacity: .5;
+
+}
+
+.banner:before{ 
+  width: 300px;
+  transform:skewX(-25deg);
+}
+
+.banner .textBox{
+  max-width: 100%;
+  padding: 20px;
+  margin-top: 100px;
+  z-index: 9;
+  text-align: center;
+}
+
+.banner .textBox h2{
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.banner .textBox p{
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 25px 0 25px;
+  text-shadow: 0 5px 10px rgba(0,0,0,.8);
+}
+
+.banner .textBox a{
+  position: relative;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  border: 1px solid transparent;
+  text-decoration: none;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.banner .textBox a:hover{
+  background-color: #111;
+  color: #d72f2f;
+  border: 1px solid #d72f2f;
+}
+
+.banner .imgBox{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content:  space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.banner .imgBox img{
+  position: absolute;
+  left: 0px;
+  bottom: 0;
+  height: 90%;
+  z-index: 9999;
+  opacity: .9;
+  -webkit-filter: drop-shadow(12px 12px 20px rgba(0,0,0,1));
+}
+
+/*Pricing Start*/
+
+#pricing{
+  position: relative;
+}
+
+#pricing .container:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  background: #7d4dd8;
+  height: 30%;
+}
+#pricing .container:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  width: 50%;
+  background: #d72f2f;
+  height: 30%;
+}
+section{
+  padding-top: 60px;
+}
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: .5rem;
+  color: #d72f2f;
+  text-transform: uppercase;
+}
+
+.container{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .planBox{
+  text-align: center;
+  border: 3px solid #d72f2f;
+  margin: 1.3rem;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,.8);
+  background: linear-gradient(to bottom, #111 35%, #d72f2f 150%);
+  max-width: 400px;
+}
+
+.planBox .plan-icon i{
+  color: #d72f2f;
+  font-size: 1.8rem;
+  margin: 20px 0px 0px 0px;
+}
+.planBox:last-child .plan-icon i{
+  color: #7d4dd8;
+  font-size: 2rem;
+}
+.planName h3{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 10px;
+}
+
+.planName p{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.planBox ul.points{
+  list-style-type: none;
+  margin-top: 50px;
+}
+.planBox ul.points li{
+  margin: 10px;
+}
+
+.planBox .pricing a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #111;
+  font-size: 1.1em;
+  margin: 10px 0;
+  padding: 15px 20px ;
+  letter-spacing: 1px;
+  transition: all .3s;
+  border: 1px solid transparent;
+}
+
+.planBox .pricing a:hover{
+  color: #d72f2f;
+  transform: scale(1.1);
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.5);
+}
+.planBox:last-child .pricing a:hover{
+  color: #7d4dd8;
+  transform: scale(1.1);
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.5);
+}
+.planBox:last-child{
+   border: 3px solid #7d4dd8;
+   background: linear-gradient(to bottom, #111 35%, #7d4dd8 150%);
+}
+
+.planBox .pricing{
+  margin-top: auto;
+  
+}
+.planBox .pricing a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #111;
+  font-size: 1.1em;
+  margin: 10px 0;
+  padding: 15px 20px ;
+  letter-spacing: 1px;
+  transition: all .3s;
+  border: 1px solid transparent;
+}
+
+.planBox .pricing p{
+  font-size: 2em;
+}
+
+.planBox .pricing span{
+  font-size: 1.5em;
+  color: #d72f2f;
+}
+
+.planBox:last-child .pricing span{
+  font-size: 1.5em;
+  color: #7d4dd8;
+}
+/*Pricing End*/
+
+/*Caution Start*/
+
+
+#covid .banner:before{
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 90px;
+  width: 100%;
+  height: 300px;
+  background: #7d4dd8;
+  transform-origin: top;
+  transform: skewX(0deg);
+  z-index: 1;
+  box-shadow: 10px 15px 20px rgba(0,0,0,9);
+  transition:.4s all;
+  clip-path: polygon(100% 50%, 0% 100%, 0 50%, 0 0);
+}
+
+#covid .banner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0px;
+  transition:.4s all;
+}
+
+#covid .imgBoxe{
+  z-index: 3;
+  position: relative;
+
+}
+
+#covid .imgBoxe img{
+  width: 400px;
+  -webkit-filter: drop-shadow(12px 12px 20px rgba(0,0,0,0.6));
+  transition: .4s;
+}
+
+#covid .imgBoxe img:hover{
+  transform: scale(1.1);
+}
+
+#covid .banner:hover:before{
+  background: #d72f2f;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  width: 100%;
+}
+/*Caution End*/
+
+/*Academy Start*/
+#place{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto;
+}
+
+
+
+#place .gym-img{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+
+  margin: 0px auto;
+}
+#place .gym-img img{
+  width: 100%;
+   transition: .3s all;
+   cursor: pointer;
+}
+
+#place .banner:nth-child(even) .textBox span{
+  color: #d72f2f;
+}
+
+
+#place .banner:nth-child(odd) .gym-img img{
+  box-shadow: -3px -10px 1px #7d4dd8,
+  0px 15px 10px rgba(0,0,0,0.5);
+}
+
+#place .banner:nth-child(even) .gym-img img{
+  box-shadow: -3px -10px 1px #d72f2f,
+  0px 15px 10px rgba(0,0,0,0.5);
+}
+/*Academy End*/
+
+/*Testimonials Start*/ 
+
+#testimonials .container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#testimonials .container .person{
+  margin: 20px;
+  border: 2px solid #d72f2f;
+  text-align: center;
+
+  padding: 10px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,.8);
+  border-radius: 5px;
+}
+
+.person-image img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 15px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,.8);
+  border: 3px solid #7d4dd8;
+}
+
+.person-desc p{
+  margin-top: 25px;
+  font-style: italic;
+}
+/*Testimonials End*/ 
+
+/*Map Start*/
+.mapouter{
+  margin-top: 40px;
+  opacity: .8;
+}
+/*Map End*/
+
+#map {
+  text-align: center;
+  box-shadow: 10px 15px 30px rgba(0,0,0,.8);
+  z-index: 9999;
+}
+
+.section-desc{
+  color: #fff;
+  width: 80%;
+  margin:  30px auto;
+}
+
+#map ul li{
+  margin: 5px;
+}
+.mapouter{
+  margin-top: 30px;
+  opacity: .7;
+}
+
+.infos{
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.work-time{
+  margin-top: 30px;
+}
+.adress h5,
+.work-time h5{
+  text-transform: uppercase;
+}
+
+footer{
+  background: #d72f2f;
+  text-align: center;
+  padding: 20px;
+
+}
+
+footer p{
+  margin: 20px;
+}
+
+.email-box{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  
+}
+
+
+.email-box i{
+  background-color: #111;
+  width: 40px;
+  line-height: 40px;
+}
+
+.tbox, .btn{
+  border: none;
+  outline: none;
+}
+
+
+.tbox{
+  width: 0px;
+  transition: .5s;
+
+}
+
+.email-box:hover .tbox, .tbox:focus{
+  width: 200px;
+  padding: 0 10px;
+  transition: .5s;
+}
+.btn{
+  background-color: #111;
+  color: #fff;
+  padding:  0 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.btn:hover{
+  background-color: #000
+}
+
+@media (max-width: 800px){
+
+  header .burger{
+    z-index: 9999;
+    display: block;
+  }
+  header .burger div{
+    height: 2px;
+    background-color: #fff;
+    width: 20px;
+    margin: 5px;
+  }
+  nav{
+    width: 0;
+  }
+  .nav-links{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    top: 11vh;
+    right: 0;
+    height: 89vh;
+    z-index: 9999;
+    width: 70%; 
+    background-color: rgba(0,0,0,.9);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    transform: translateX(100%);
+    transition:  transform .5s ease-in;
+  }
+
+  .nav-active{
+    transform: translateX(0%);
+  }
+
+
+}
+
+@media (min-width:800px){
+
+  #banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  #covid .imgBoxe img{
+    width: 500px;
+    -webkit-filter: drop-shadow(12px 12px 20px rgba(0,0,0,0.6));
+    transition: .4s;
+  }
+  #testimonials .container .person{
+    width: 600px;
+  }
+
+  .infos{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 0px;
+  }
+
+  .work-time{
+    margin-top: 0px;
+  }
+  
+}
+
+@media (min-width: 1024px){
+
+
+  header .logo{
+    font-size: 2.5rem;
+  }
+
+  
+  #pricing .container{
+    margin: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pricing:{
+    position: relative;
+  }
+
+  #pricing .planBox{
+    margin: 80px;
+    transition: .3s;
+    min-width: 400px;
+  }
+
+  #pricing .planBox:hover{
+    transform: scale(1.1);
+  }
+  #pricing .container:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    background: #7d4dd8;
+    height: 30%;
+  }
+  #pricing .container:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 50%;
+    background: #d72f2f;
+    height: 30%;
+  }
+
+  #covid .textBox{
+    width: 70%;
+  }
+
+  #place .banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #place .banner:nth-child(even){
+    flex-direction: row-reverse;
+  }
+
+  #place .gym-img{
+    width: 100%;
+  }
+  #place .gym-img img{
+    width: 600px;
+  }
+
+  #place .gym-img img:hover{
+    transform: scale(1.1);
+  }
+  #place .banner .textBox{
+    width: 50%;
+  }
+
+  #testimonials .container{
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #testimonials .container .person{
+    width: 400px;
+  }
+  
+
+  #testimonials .container .person .person-desc p{
+    margin-top: 0 auto;
+  }
+}
