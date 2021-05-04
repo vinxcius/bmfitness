@@ -111,11 +111,14 @@ header .logo span{
   transform:skewX(-25deg);
 }
 
+#banner .textBox{
+  padding: 20px;
+  margin-top: 120px;
+}
 .banner .textBox{
   max-width: 100%;
-  padding: 20px;
-  margin-top: 100px;
   z-index: 9;
+  padding: 20px;
   text-align: center;
 }
 
@@ -381,14 +384,15 @@ section{
 
 
 #place .gym-img{
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
 
   margin: 0px auto;
 }
 #place .gym-img img{
-  width: 100%;
+  width: 90%;
+  height: 100%;
    transition: .3s all;
    cursor: pointer;
 }
@@ -607,6 +611,10 @@ footer p{
 
   .work-time{
     margin-top: 0px;
+  }
+
+  #place .gym-img img{
+    width: 600px;
   }
   
 }
