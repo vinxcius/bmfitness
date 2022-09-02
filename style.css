@@ -11,11 +11,11 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  background-color: #111;
+  background-color: pink;
   color: #fff;
 }
 header{
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: pink;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -48,8 +48,8 @@ nav{
 
 nav ul li a{
   text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
+  color: #111;
+  font-size: 1.2rem;
   text-transform: uppercase;
   transition: .4s;
 }
@@ -67,22 +67,44 @@ header .logo{
   letter-spacing: 4px;
   text-transform: uppercase;
   text-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
+  transition: 0.4s;
 }
-
+header .logo:hover{
+  color: #bb0e48;
+}
 
 header .logo span{
   color: #d72f2f;
 }
 
+i.icon{
+  font-size:15em;
+  color: #7d4dd8;
+  text-shadow: 0 10px 15px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  animation: spin 0.5s ease-in infinite;
+  animation-direction: alternate-reverse;
+  transition: color 0.8s;
+  cursor: pointer;
+}
 
-
-
+i.icon:hover{
+  color: #bb0e48;
+}
+@keyframes spin {
+  0% {
+   transform: scale(1);
+  }
+  100% {
+   transform: scale(1.1);
+  }
+ }
 
 #banner,
 #covid .banner{
   position: relative;
-  min-height: 89vh;
-  background-color: #111;
+  min-height: 100vh;
+  background-color:rgb(204, 144, 194);
   display: flex;
   padding: 40px 0 0;
   justify-content: center;
@@ -90,30 +112,9 @@ header .logo span{
 
   overflow:hidden;
 }
-
-#banner:before{
-  content: '';
-  position: absolute;
-  right: -120px;
-  top: 0;
-  width: 300px;
-  height: 100%;
-  background-color: #d72f2f;
-  transform-origin: top;
-  transform:skewX(-25deg);
-  z-index: 1;
-  opacity: .5;
-
-}
-
-.banner:before{ 
-  width: 300px;
-  transform:skewX(-25deg);
-}
-
 #banner .textBox{
-  padding: 20px;
-  margin-top: 120px;
+  padding: 0px;
+  margin-top: 10px;
 }
 .banner .textBox{
   max-width: 100%;
@@ -123,15 +124,16 @@ header .logo span{
 }
 
 .banner .textBox h2{
-  color: #fff;
-  font-size: 1.5rem;
+  color: rgb(24, 24, 24);
+  font-size: 1.9rem;
   text-transform: uppercase;
 }
 
 .banner .textBox p{
-  color: #fff;
-  font-size: 1.1rem;
-  margin: 25px 0 25px;
+  color: #8f0130;
+  font-size: 1.5rem;
+  width: 70%;
+  margin: 25px auto;
   text-shadow: 0 5px 10px rgba(0,0,0,.8);
 }
 
@@ -142,7 +144,8 @@ header .logo span{
   background: #fff;
   border: 1px solid transparent;
   text-decoration: none;
-  padding: 10px 20px;
+  margin-top: 30px;
+  padding: 15px 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: bold;
@@ -150,9 +153,9 @@ header .logo span{
 }
 
 .banner .textBox a:hover{
-  background-color: #111;
-  color: #d72f2f;
-  border: 1px solid #d72f2f;
+  background-color: rgb(204, 144, 194);
+  color: white;
+  border: 1px solid rgba(0,0,0,0.5);
 }
 
 .banner .imgBox{
@@ -181,32 +184,13 @@ header .logo span{
   position: relative;
 }
 
-#pricing .container:before{
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  background: #7d4dd8;
-  height: 30%;
-}
-#pricing .container:after{
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: -1;
-  width: 50%;
-  background: #d72f2f;
-  height: 30%;
-}
+
 section{
   padding-top: 60px;
 }
 .section-title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: .5rem;
   color: #d72f2f;
   text-transform: uppercase;
@@ -221,14 +205,13 @@ section{
 }
 
 .container .planBox{
-  text-align: center;
-  border: 3px solid #d72f2f;
-  margin: 1.3rem;
+  border:transparent;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0px 90px;
+  padding-bottom: 70px;
   box-shadow: 0px 15px 20px rgba(0,0,0,.8);
-  background: linear-gradient(to bottom, #111 35%, #d72f2f 150%);
-  max-width: 400px;
+  background: #7d4dd8;
+  width: 60%;
 }
 
 .planBox .plan-icon i{
@@ -239,11 +222,13 @@ section{
 .planBox:last-child .plan-icon i{
   color: #7d4dd8;
   font-size: 2rem;
+  text-align: center;
 }
 .planName h3{
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 10px;
+  font-size: 2em;
 }
 
 .planName p{
@@ -252,7 +237,7 @@ section{
 }
 
 .planBox ul.points{
-  list-style-type: none;
+  font-size: 20px;
   margin-top: 50px;
 }
 .planBox ul.points li{
@@ -283,10 +268,7 @@ section{
   color: #7d4dd8;
   transform: scale(1.1);
   box-shadow: 0px 15px 20px rgba(0,0,0,0.5);
-}
-.planBox:last-child{
-   border: 3px solid #7d4dd8;
-   background: linear-gradient(to bottom, #111 35%, #7d4dd8 150%);
+
 }
 
 .planBox .pricing{
@@ -323,55 +305,6 @@ section{
 }
 /*Pricing End*/
 
-/*Caution Start*/
-
-
-#covid .banner:before{
-  content: '';
-  position: absolute;
-  left: 0px;
-  top: 90px;
-  width: 100%;
-  height: 300px;
-  background: #7d4dd8;
-  transform-origin: top;
-  transform: skewX(0deg);
-  z-index: 1;
-  box-shadow: 10px 15px 20px rgba(0,0,0,9);
-  transition:.4s all;
-  clip-path: polygon(100% 50%, 0% 100%, 0 50%, 0 0);
-}
-
-#covid .banner{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 0px;
-  transition:.4s all;
-}
-
-#covid .imgBoxe{
-  z-index: 3;
-  position: relative;
-
-}
-
-#covid .imgBoxe img{
-  width: 400px;
-  -webkit-filter: drop-shadow(12px 12px 20px rgba(0,0,0,0.6));
-  transition: .4s;
-}
-
-#covid .imgBoxe img:hover{
-  transform: scale(1.1);
-}
-
-#covid .banner:hover:before{
-  background: #d72f2f;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  width: 100%;
-}
-/*Caution End*/
 
 /*Academy Start*/
 #place{
@@ -379,64 +312,47 @@ section{
   flex-direction: column;
   align-items: center;
   margin: 0px auto;
+  background-color:rgb(204, 144, 194);
 }
-
-
-
-#place .gym-img{
-  width: 100%;
+#place .container{
   display: flex;
-  justify-content: center;
-
-  margin: 0px auto;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-#place .gym-img img{
-  width: 90%;
-  height: 100%;
-   transition: .3s all;
-   cursor: pointer;
+#place .banner{
+  width: 50%;
 }
-
 #place .banner:nth-child(even) .textBox span{
   color: #d72f2f;
 }
 
-
-#place .banner:nth-child(odd) .gym-img img{
-  box-shadow: -3px -10px 1px #7d4dd8,
-  0px 15px 10px rgba(0,0,0,0.5);
+#place .textBox p{
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: rgb(126, 1, 26);
+  width: 100%;
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
 
-#place .banner:nth-child(even) .gym-img img{
-  box-shadow: -3px -10px 1px #d72f2f,
-  0px 15px 10px rgba(0,0,0,0.5);
-}
+
 /*Academy End*/
 
 /*Testimonials Start*/ 
 
 #testimonials .container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 
 }
 
-#testimonials .container .person{
-  margin: 20px;
-  border: 2px solid #d72f2f;
-  text-align: center;
-
-  padding: 10px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,.8);
-  border-radius: 5px;
+#testimonials .container .banner{
+  width: 50%;
 }
 
-.person-image img{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+#testimonials .container .banner img{
+  width: 600px;
   margin: 15px;
-  box-shadow: 0px 5px 20px rgba(0,0,0,.8);
   border: 3px solid #7d4dd8;
 }
 
@@ -447,16 +363,26 @@ section{
 /*Testimonials End*/ 
 
 /*Map Start*/
-.mapouter{
-  margin-top: 40px;
-  opacity: .8;
-}
-/*Map End*/
+
 
 #map {
   text-align: center;
   box-shadow: 10px 15px 30px rgba(0,0,0,.8);
   z-index: 9999;
+  background-color: #7d4dd8;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+#map .section-title{
+  color: white;
+}
+
+#map .section-text{
+  color: white;
+  width: 50%;
+  margin: 0px auto;
+
 }
 
 .section-desc{
@@ -648,26 +574,7 @@ footer p{
   #pricing .planBox:hover{
     transform: scale(1.1);
   }
-  #pricing .container:before{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    background: #7d4dd8;
-    height: 30%;
-  }
-  #pricing .container:after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    width: 50%;
-    background: #d72f2f;
-    height: 30%;
-  }
+
 
   #covid .textBox{
     width: 70%;
